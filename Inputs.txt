@@ -1,0 +1,50 @@
+or al, bl
+add eax, ebx
+l1:
+add [al], bl
+l2:
+add eax, ebx
+jmp l2
+add al, bl
+add eax, ebx
+add al, bl
+jmp l1
+sub eax, [ecx]
+or al, bl
+add eax, ebx
+l1:
+jmp l2
+l3:
+add [al], bl
+jmp l1
+add eax, ebx
+add al, bl
+jmp l1
+sub eax, [ecx]
+jmp l3
+test1:
+jmp test2
+test2:
+sub eax, [ecx]
+or al, bl
+add eax, ebx
+l1:
+jmp l2
+add [al], bl
+l2:
+l2:
+add eax, ebx
+add al, bl
+jmp l1
+sub eax, [ecx]
+jmp l3
+test1:
+jmp test2
+test2:
+or al, bh
+add eax, [dh]
+add [al], bl
+add eax, ebx
+jmp test1
+add al, bl
+sub eax, [ecx]
